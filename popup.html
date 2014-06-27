@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	     <link href="libs\bootstrap.min.css" rel="stylesheet">
+		 <link href="libs\style.css" rel="stylesheet">
+		 <link href="libs\font-awesome.min.css" rel="stylesheet">
+		 <script src="libs\jquery-2.1.1.min.js"></script>
+		 <script src="libs\chance.js"></script>
+		 <script src="libs\actionHandler.js"></script>
+		 <script src="popup.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<button id="enabled" class="btn btn-sm btn-primary"><i id="enbFlag" class="fa fa-check"></i>&nbsp;Enabled</button>
+					<div class="pull-right"><button id="pop" class="btn btn-sm btn-primary"><i class="fa fa-arrow-up"></i> &nbsp;Popout</button></div>
+				</div>
+			</div>
+
+			<div id="disabledInstuction">Enable the plugin and generate random data! You may also assign key shortcuts to any of these commands</div>
+			<div id="commands">
+
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-12 panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-random"></i>&nbsp;Floats & Things
+						</div>
+						<div class="panel-body">
+							<div class="col-sm-12">
+								<button class="btn btn-xs btn-primary" data-cmd="floating">Floating</button>
+								<button class="btn btn-xs btn-primary"  data-cmd="integer">Integer</button>
+								<button class="btn btn-xs btn-primary" data-cmd="natural">Natural</button>
+								<button class="btn btn-xs btn-primary" data-cmd="bool" id="">Boolean</button>
+								<button class="btn btn-xs btn-primary" data-cmd="character">Character</button>
+								<button class="btn btn-xs btn-primary" data-cmd="paragraph">Paragraph</button>
+								<button class="btn btn-xs btn-primary" data-cmd="sentence">Sentence</button>
+								<button class="btn btn-xs btn-primary" data-cmd="syllable">Syllable</button>
+								<button class="btn btn-xs btn-primary" data-cmd="word">Word</button><br>
+								<button class="btn btn-xs btn-primary" data-cmd="date" data-cmd-opts='{"string": "true"}'>Date</button>
+								<button class="btn btn-xs btn-primary" data-cmd="year">Year</button>
+								<button class="btn btn-xs btn-primary" data-cmd="month">Month</button><br>
+								<button class="btn btn-xs btn-primary" data-cmd="cc">Credit Card</button>
+								<button class="btn btn-xs btn-primary" data-cmd="cc_type">Card Type</button>
+								<button class="btn btn-xs btn-primary" data-cmd="dollar">Dollar</button>
+								<button class="btn btn-xs btn-primary" data-cmd="exp">Card Expiration</button>
+								<button class="btn btn-xs btn-primary" data-cmd="exp_month" data-cmd-opts='{"future": "true"}'>Card Exp Month</button>
+								<button class="btn btn-xs btn-primary" data-cmd="exp_year" data-cmd-opts='{"future": "true"}'>Card Exp Year</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-12 panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-user"></i>&nbsp;Person
+						</div>
+						<div class="panel-body">
+							<div class="col-sm-12">
+								<button class="btn btn-xs btn-primary" data-cmd="name">Full Name</button>
+								<button class="btn btn-xs btn-primary" data-cmd="first">First Name</button>
+								<button class="btn btn-xs btn-primary" data-cmd="last">Last Name</button>
+								<button class="btn btn-xs btn-primary" data-cmd="email">Email</button>
+								<button class="btn btn-xs btn-primary" data-cmd="phone">Phone</button>
+								<button class="btn btn-xs btn-primary" data-cmd="prefix">Prefix</button>
+								<button class="btn btn-xs btn-primary" data-cmd="gender">Gender</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-12 panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-location-arrow"></i>&nbsp;Address
+						</div>
+						<div class="panel-body">
+							<div class="col-sm-12">
+								<button class="btn btn-xs btn-primary" data-cmd="address">Address</button>
+								<button class="btn btn-xs btn-primary" data-cmd="street">Street</button>
+								<button class="btn btn-xs btn-primary" data-cmd="city">City</button>
+								<button class="btn btn-xs btn-primary" data-cmd="areacode">AreaCode</button>
+								<button class="btn btn-xs btn-primary" data-cmd="zip">Zip</button>
+								<button class="btn btn-xs btn-primary" data-cmd="state">State</button>
+								<button class="btn btn-xs btn-primary" data-cmd="coordinates">Coordinates</button>
+								<button class="btn btn-xs btn-primary" data-cmd="latitude">Latitude</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-12 panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-globe"></i>&nbsp;Web
+						</div>
+						<div class="panel-body">
+							<div class="col-sm-12">
+								<button class="btn btn-xs btn-primary" data-cmd="color">Color</button>
+								<button class="btn btn-xs btn-primary" data-cmd="domain">Domain</button>
+								<button class="btn btn-xs btn-primary" data-cmd="twitter">Twitter</button>
+								<button class="btn btn-xs btn-primary" data-cmd="hashtag">Hashtag</button>
+								<button class="btn btn-xs btn-primary" data-cmd="ip">IP</button>
+								<button class="btn btn-xs btn-primary" data-cmd="tld">TLD</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+		</div>
+	</body>
+
+</html>

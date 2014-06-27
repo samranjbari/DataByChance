@@ -1,0 +1,62 @@
+{
+  "manifest_version": 2,
+
+  "name": "Data By Chance",
+  "description": "This extension populates the selected DOM element with a random value using chance.",
+  "version": "1.0",
+
+  "browser_action" :
+  {
+    "default_icon": "icon.png",
+    "default_title" : "Data By Chance",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["libs/chance.js", "libs/actionHandler.js", "background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+     {
+       //"matches": ["http://lobbyregistration-d8088.leg.fla.int/*"],
+       "matches": ["http://*/*", "https://*/*"],
+       "js": ["content_script.js"]
+     }
+  ],
+  "commands": {
+    "fname": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1",
+        "mac": "Command+Shift+1"
+      },
+      "description": "Generate first name"
+    },
+    "lname": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2",
+        "mac": "Command+Shift+2"
+      },
+      "description": "Generate last name"
+    },
+    "fullname": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Generate full name"
+    },
+    "address": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      },
+      "description": "Generate address"
+    },
+    "city": {      
+      "description": "Generate City"
+    }
+  }
+}
